@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 import jwt
 import os
 
-from app.schemas import User as UserSchema
+from app.schemas import CreateUser, User as UserSchema
 from app.utils.db_manager import get_user_by_username, create_user, Session
 from app.utils import Encrypter, Session
 
@@ -68,7 +68,7 @@ class User:
             raise HTTPException(status_code=401, detail="User not found")
         return user
 
-    def register(user: UserSchema):
+    def register(user: CreateUser):
         existing_user = get_user_by_username(Session, user.username)
         if existing_user:
             raise HTTPException(status_code=400, detail="Username already registered")
