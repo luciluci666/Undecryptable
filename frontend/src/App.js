@@ -1,5 +1,4 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles/app.css';
 import axios from 'axios';
 import React, { useState } from 'react';
 
