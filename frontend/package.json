@@ -17,7 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "watch": "nodemon  -e \"scss, js\" --watch src --exec \"npm run build:css && npm run build\"",
+    "watch": "nodemon  -e \"scss, js, jsx\" --watch src --exec \"npm run build:css && npm run build\"",
     "build:css": "node-sass src/styles/scss/ -o src/styles/ "
   },
   "eslintConfig": {
